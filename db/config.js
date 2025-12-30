@@ -1,11 +1,6 @@
 import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-import path from 'path';
 
 const { connect, connection } = mongoose;
-
-const env = process.env.NODE_ENV === 'production' ? '.env.uat' : '.env.local';
-dotenv.config({ path: path.resolve(process.cwd(), env) });
 
 const connectDB = async () => {
   try {

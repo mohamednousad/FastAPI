@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 import express from "express";
 import cors from "cors";
+import userRoutes from './routes/user.js';
 
 dotenv.config();
 const app = express();
@@ -9,14 +10,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const corsOptions = {
-  origin: ["http://localhost:3418"],
+  origin: [process.env.ORIGIN_OPTIONS || "http://localhost:3418"],
   credentials: true,
   optionSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
 
-import TestRoutes from "./routes/test.js";
-app.use("/api/Dashboard", TestRoutes);
+app.use('/api/users', userRoutes);
 
 app.use((req, res) => {
   res.status(404).send("404 - API not found");
