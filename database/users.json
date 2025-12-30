@@ -1,6 +1,103 @@
 [
   {
-    "_id": "2f1f6afa-c346-4224-b021-f51f52086848",
+    "_id": "a756a7c7278c4668a8f6144692919482",
+    "createdAt": "2025-12-30T15:09:27.548Z",
+    "userName": "John Doe",
+    "age": 25,
+    "phoneNumber": 1234567890,
+    "address": {
+      "street": "123 Main St",
+      "city": "New York",
+      "state": "NY",
+      "zipCode": "10001"
+    },
+    "skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "MongoDB"
+    ],
+    "isStudent": true,
+    "joinedAt": "2024-03-15T10:30:00.000Z",
+    "notes": null,
+    "courseDetails": [
+      {
+        "courseName": "Web Development Bootcamp",
+        "startedDate": "2024-01-10T09:00:00.000Z"
+      },
+      {
+        "courseName": "React Advanced Course",
+        "startedDate": "2024-02-20T14:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "_id": "1bd3e8b652294079b2a154c416d4b905",
+    "createdAt": "2025-12-30T15:13:00.429Z",
+    "userName": "John Doe",
+    "age": 25,
+    "phoneNumber": 1234567890,
+    "address": {
+      "street": "123 Main St",
+      "city": "New York",
+      "state": "NY",
+      "zipCode": "10001"
+    },
+    "skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "MongoDB"
+    ],
+    "isStudent": true,
+    "joinedAt": "2024-03-15T10:30:00.000Z",
+    "notes": null,
+    "courseDetails": [
+      {
+        "courseName": "Web Development Bootcamp",
+        "startedDate": "2024-01-10T09:00:00.000Z"
+      },
+      {
+        "courseName": "React Advanced Course",
+        "startedDate": "2024-02-20T14:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "_id": "13fc56596fe646299a8a20b722e4173b",
+    "createdAt": "2025-12-30T15:13:24.171Z",
+    "userName": "John Doe",
+    "age": 25,
+    "phoneNumber": 1234567890,
+    "address": {
+      "street": "123 Main St",
+      "city": "New York",
+      "state": "NY",
+      "zipCode": "10001"
+    },
+    "skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "MongoDB"
+    ],
+    "isStudent": true,
+    "joinedAt": "2024-03-15T10:30:00.000Z",
+    "notes": null,
+    "courseDetails": [
+      {
+        "courseName": "Web Development Bootcamp",
+        "startedDate": "2024-01-10T09:00:00.000Z"
+      },
+      {
+        "courseName": "React Advanced Course",
+        "startedDate": "2024-02-20T14:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "_id": "7def4847e7c64f38a469255e32bbbeaf",
+    "createdAt": "2025-12-30T15:13:59.049Z",
     "userName": "John Doe",
     "age": 25,
     "phoneNumber": 1234567890,

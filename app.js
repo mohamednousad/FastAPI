@@ -10,7 +10,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const corsOptions = {
-  origin: [process.env.ORIGIN_OPTIONS || "http://localhost:3418"],
+  // origin: [process.env.ORIGIN_OPTIONS || "http://localhost:3000"],
+  origin: "*",
   credentials: true,
   optionSuccessStatus: 200,
 };

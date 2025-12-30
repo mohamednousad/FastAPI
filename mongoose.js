@@ -1,3 +1,6 @@
+import * as db from './dbHandler.js';
+import { randomUUID } from 'crypto';
+
 export class Schema {
   constructor(schema) {
     this.schema = schema;
@@ -31,7 +34,7 @@ export class Schema {
         Date: 'object'
       };
 
-      if (rule.type === null) return true; // allow null
+      if (rule.type === null) return true; 
       if (rule.type === Date) return value instanceof Date || !isNaN(new Date(value));
       return typeof value === typeMap[rule.type.name];
     });
@@ -53,5 +56,36 @@ export class Schema {
       }
       return acc;
     }, {});
+  }
+}
+
+export class Model {
+  constructor(collection, schema) {
+    this.collection = collection;
+    this.schema = schema;
+  }
+
+  getAll() {
+    return db.getAll(this.collection);
+  }
+
+  getById(_id) {
+    return db.getById(this.collection, _id);
+  }
+
+  create(data) {
+    if (!this.schema.validate(data)) throw new Error('Invalid data');
+    const timestamp = new Date().toISOString();
+    const newItem = { _id: randomUUID().replace(/-/g, ''), createdAt: timestamp, ...this.schema.sanitize(data) };
+    return db.create(this.collection, newItem);
+  }
+
+  update(_id, data) {
+    if (!this.schema.validate(data, true)) throw new Error('Invalid data');
+    return db.update(this.collection, _id, this.schema.sanitize(data));
+  }
+
+  remove(_id) {
+    return db.remove(this.collection, _id);
   }
 }
