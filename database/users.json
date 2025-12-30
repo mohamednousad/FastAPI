@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "_id": "2f1f6afa-c346-4224-b021-f51f52086848",
+    "userName": "John Doe",
+    "age": 25,
+    "phoneNumber": 1234567890,
+    "address": {
+      "street": "123 Main St",
+      "city": "New York",
+      "state": "NY",
+      "zipCode": "10001"
+    },
+    "skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "MongoDB"
+    ],
+    "isStudent": true,
+    "joinedAt": "2024-03-15T10:30:00.000Z",
+    "notes": null,
+    "courseDetails": [
+      {
+        "courseName": "Web Development Bootcamp",
+        "startedDate": "2024-01-10T09:00:00.000Z"
+      },
+      {
+        "courseName": "React Advanced Course",
+        "startedDate": "2024-02-20T14:00:00.000Z"
+      }
+    ]
+  }
+]
